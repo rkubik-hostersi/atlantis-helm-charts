@@ -563,7 +563,7 @@ spec:
           {{- end }}
           {{- if or .Values.aws.credentials .Values.aws.config .Values.awsSecretName }}
           - name: aws-volume
-            readOnly: true
+            readOnly: {{ .Values.aws.directoryReadOnly | default "true" }}
             mountPath: {{ .Values.aws.directory | default "/home/atlantis/.aws" }}
           {{- end }}
           {{- if .Values.tlsSecretName }}

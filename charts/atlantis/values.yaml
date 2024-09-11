@@ -144,6 +144,7 @@ aws: {}
 #     role_arn = arn:aws:iam::123456789:role/service-role/roleToAssume
 #     source_profile = default
 #   directory: "/home/atlantis/.aws"
+#   directoryReadOnly: false
 
 # -- To reference an already existing Secret object with AWS credentials
 awsSecretName: ""
